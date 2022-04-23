@@ -50,7 +50,7 @@ describe("Employee class", () => {
     it("getRole", () => {
         const role = 'Employee';// Arrange
         const obj = new Employee(role);// Act
-        expect(getEmail()).toEqual(role);// Assert
+        expect(getRole()).toEqual(role);// Assert
     });
 
 
