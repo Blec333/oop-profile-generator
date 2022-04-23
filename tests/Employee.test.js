@@ -41,3 +41,45 @@
 // * `getRole()`&mdash;overridden to return `'Intern'`
 
 // Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
+
+const Employee = require("../lib/Employee");
+
+describe("Employee class", () => {
+  it("name", () => {
+
+    expect(new Employee("?").visible).toBe(true);
+  });
+  
+  it("id", () => {
+
+    expect(new Employee("a").visible).toBe(false); 
+  });
+
+  it("email", () => {
+
+    expect(new Employee("a").toString()).toBe("_");
+  });
+
+  it("getName", () => {
+
+    expect(new Employee("?").toString()).toBe("?");
+  });
+
+  describe("guess", () => {
+    it("Correct guess returns true", () => {
+
+      expect(new Employee("j").guess("j")).toBe(true);
+    });
+
+    it("Incorrect guess returns false", () => {
+
+      expect(new Employee("j").guess("l")).toBe(false);
+    });
+  });
+
+  describe("getSolution", () => {
+    it("returns character", () => {
+      expect(new Employee("l").getSolution()).toBe("l");
+    });
+  });
+});
