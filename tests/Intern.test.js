@@ -1,43 +1,70 @@
-// The application must include `Employee`, `Manager`, `Engineer`, and `Intern` classes. The tests for these classes (in the `_tests_` directory) must ALL pass.
 
-// The first class is an `Employee` parent class with the following properties and methods:
+const Intern = require("../lib/Intern");
 
-// * `name`
+describe("Intern class", () => {
+    // * `name`
+    it("name", () => {
+        const name = 'John';// Arrange
+        const obj = new Intern(name);// Act
+        expect(obj.name).toEqual(name);// Assert
+    });
 
-// * `id`
+    // * `id`
+    it("id", () => {
+        const id = '123';// Arrange
+        const obj = new Intern(id);// Act
+        expect(obj.id).toEqual(id);// Assert
+    });
 
-// * `email`
+    // * `email`
+    it("email", () => {
+        const email = 'some@thing.com';// Arrange
+        const obj = new Intern(email);// Act
+        expect(obj.email).toEqual(email);// Assert
+    });
 
-// * `getName()`
+    // * `school`
+    it("school", () => {
+        const school = 'Bootcamp University';// Arrange
+        const obj = new Intern(school);// Act
+        expect(obj.school).toEqual(school);// Assert
+    });
 
-// * `getId()`
+    // * `getName()`
+    it("getName", () => {
+        const name = 'John';// Arrange
+        const obj = new Intern(name);// Act
+        expect(getName()).toEqual(name);// Assert
+    });
 
-// * `getEmail()`
+    // * `getId()`
+    it("getID", () => {
+        const id = '123';// Arrange
+        const obj = new Intern(id);// Act
+        expect(getID()).toEqual(id);// Assert
+    });
 
-// * `getRole()`&mdash;returns `'Employee'`
+    // * `getEmail()`
+    it("getEmail", () => {
+        const email = 'some@thing.com';// Arrange
+        const obj = new Intern(email);// Act
+        expect(getEmail()).toEqual(email);// Assert
+    });
 
-// The other three classes will extend `Employee`.
+    // * `getSchool()`
+    it("getSchool", () => {
+        const school = 'Bootcamp University';// Arrange
+        const obj = new Intern(school);// Act
+        expect(getSchool()).toEqual(school);// Assert
+    });
 
-// In addition to `Employee`'s properties and methods, `Manager` will also have the following:
+    // * `getRole()` returns `'Intern'`
+    it("getRole", () => {
+        const role = 'Intern';// Arrange
+        const obj = new Intern(role);// Act
+        expect(getRole()).toEqual(role);// Assert
+    });
 
-// * `officeNumber`
-
-// * `getRole()`&mdash;overridden to return `'Manager'`
-
-// In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
-
-// * `github`&mdash;GitHub username
-
-// * `getGithub()`
-
-// * `getRole()`&mdash;overridden to return `'Engineer'`
-
-// In addition to `Employee`'s properties and methods, `Intern` will also have the following:
-
-// * `school`
-
-// * `getSchool()`
-
-// * `getRole()`&mdash;overridden to return `'Intern'`
 
 // Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.
+});
