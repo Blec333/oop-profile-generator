@@ -1,7 +1,7 @@
 
 const inquirer = require('inquirer');
 const fs = require("fs");
-const genHTML = require("./lib/generate-html");
+const genHTML = require("./lib/generate-htmlcss");
 const Choices = require('inquirer/lib/objects/choices');
 const { Console } = require('console');
 
@@ -13,12 +13,13 @@ var answers = [];
 // THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
 function askMgrQuestions() {
     genHTML.writeHTMLTop();
+    genHTML.writeCSS();
     const questions = [
         inquirer
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is your name?',
+                    message: 'Manager: What is your name?',
                     name: 'name'
                 },
                 {
@@ -33,7 +34,7 @@ function askMgrQuestions() {
                 },
                 {
                     type: 'input',
-                    message: 'Please enter you office phone number (direct line):',
+                    message: 'Please enter your office phone number (direct line):',
                     name: 'info'
                 },
                 // WHEN I enter the team manager’s name, employee ID, email address, and office number
@@ -71,7 +72,7 @@ function askEngQuestions() {
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is your name?',
+                    message: 'What is your engineer\'s name?',
                     name: 'name'
                 },
                 {
@@ -121,7 +122,7 @@ function askInternQuestions() {
             .prompt([
                 {
                     type: 'input',
-                    message: 'What is your name?',
+                    message: 'What is your intern\'s name?',
                     name: 'name'
                 },
                 {
