@@ -39,10 +39,10 @@ describe("Intern class", () => {
     });
 
     // * `getId()`
-    it("getID", () => {
+    it("getId", () => {
         const id = '123';// Arrange
         const obj = new Intern('', id);// Act
-        expect(obj.getID()).toEqual(id);// Assert
+        expect(obj.getId()).toEqual(id);// Assert
     });
 
     // * `getEmail()`

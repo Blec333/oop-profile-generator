@@ -39,10 +39,10 @@ it("email", () => {
     });
 
 // * `getId()`
-    it("getID", () => {
+    it("getId", () => {
         const id = '123';// Arrange
         const obj = new Engineer('', id);// Act
-        expect(obj.getID()).toEqual(id);// Assert
+        expect(obj.getId()).toEqual(id);// Assert
     });
 
 // * `getEmail()`
