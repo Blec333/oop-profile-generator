@@ -13,21 +13,21 @@ describe("Manager class", () => {
     // * `id`
     it("id", () => {
         const id = '123';// Arrange
-        const obj = new Manager(id);// Act
+        const obj = new Manager('', id);// Act
         expect(obj.id).toEqual(id);// Assert
     });
 
     // * `email`
     it("email", () => {
         const email = 'some@thing.com';// Arrange
-        const obj = new Manager(email);// Act
+        const obj = new Manager('', '', email);// Act
         expect(obj.email).toEqual(email);// Assert
     });
 
     // * `officeNumber`
     it("officeNumber", () => {
         const officeNumber = '(098) 123 - 4567';// Arrange
-        const obj = new Manager(officeNumber);// Act
+        const obj = new Manager('', '', '', officeNumber);// Act
         expect(obj.officeNumber).toEqual(officeNumber);// Assert
     });
 
@@ -35,29 +35,29 @@ describe("Manager class", () => {
     it("getName", () => {
         const name = 'John';// Arrange
         const obj = new Manager(name);// Act
-        expect(getName()).toEqual(name);// Assert
+        expect(obj.getName()).toEqual(name);// Assert
     });
 
     // * `getId()`
     it("getID", () => {
         const id = '123';// Arrange
-        const obj = new Manager(id);// Act
-        expect(getID()).toEqual(id);// Assert
+        const obj = new Manager('', id);// Act
+        expect(obj.getID()).toEqual(id);// Assert
     });
 
     // * `getEmail()`
     it("getEmail", () => {
         const email = 'some@thing.com';// Arrange
-        const obj = new Manager(email);// Act
-        expect(getEmail()).toEqual(email);// Assert
+        const obj = new Manager('', '', email);// Act
+        expect(obj.getEmail()).toEqual(email);// Assert
     });
 
 
     // * `getRole()` returns `'Manager'`
     it("getRole", () => {
         const role = 'Manager';// Arrange
-        const obj = new Manager(role);// Act
-        expect(getRole()).toEqual(role);// Assert
+        const obj = new Manager();// Act
+        expect(obj.getRole()).toEqual(role);// Assert
     });
 
 

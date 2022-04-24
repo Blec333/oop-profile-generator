@@ -13,14 +13,14 @@ describe("Employee class", () => {
 // * `id`
     it("id", () => {
         const id = '123';// Arrange
-        const obj = new Employee(id);// Act
+        const obj = new Employee('', id);// Act
         expect(obj.id).toEqual(id);// Assert
     });
 
 // * `email`
     it("email", () => {
         const email = 'some@thing.com';// Arrange
-        const obj = new Employee(email);// Act
+        const obj = new Employee('', '', email);// Act
         expect(obj.email).toEqual(email);// Assert
     });
 
@@ -28,28 +28,28 @@ describe("Employee class", () => {
     it("getName", () => {
         const name = 'John';// Arrange
         const obj = new Employee(name);// Act
-        expect(getName()).toEqual(name);// Assert
+        expect(obj.getName()).toEqual(name);// Assert
     });
 
 // * `getId()`
     it("getID", () => {
         const id = '123';// Arrange
-        const obj = new Employee(id);// Act
-        expect(getID()).toEqual(id);// Assert
+        const obj = new Employee('', id);// Act
+        expect(obj.getID()).toEqual(id);// Assert
     });
 
 // * `getEmail()`
     it("getEmail", () => {
         const email = 'some@thing.com';// Arrange
-        const obj = new Employee(email);// Act
-        expect(getEmail()).toEqual(email);// Assert
+        const obj = new Employee('', '', email);// Act
+        expect(obj.getEmail()).toEqual(email);// Assert
     });
 
 // * `getRole()` returns `'Employee'`
     it("getRole", () => {
         const role = 'Employee';// Arrange
-        const obj = new Employee(role);// Act
-        expect(getRole()).toEqual(role);// Assert
+        const obj = new Employee();// Act
+        expect(obj.getRole()).toEqual(role);// Assert
     });
 
 

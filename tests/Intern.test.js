@@ -13,21 +13,21 @@ describe("Intern class", () => {
     // * `id`
     it("id", () => {
         const id = '123';// Arrange
-        const obj = new Intern(id);// Act
+        const obj = new Intern('', id);// Act
         expect(obj.id).toEqual(id);// Assert
     });
 
     // * `email`
     it("email", () => {
         const email = 'some@thing.com';// Arrange
-        const obj = new Intern(email);// Act
+        const obj = new Intern('', '', email);// Act
         expect(obj.email).toEqual(email);// Assert
     });
 
     // * `school`
     it("school", () => {
         const school = 'Bootcamp University';// Arrange
-        const obj = new Intern(school);// Act
+        const obj = new Intern('', '', '', school);// Act
         expect(obj.school).toEqual(school);// Assert
     });
 
@@ -35,35 +35,35 @@ describe("Intern class", () => {
     it("getName", () => {
         const name = 'John';// Arrange
         const obj = new Intern(name);// Act
-        expect(getName()).toEqual(name);// Assert
+        expect(obj.getName()).toEqual(name);// Assert
     });
 
     // * `getId()`
     it("getID", () => {
         const id = '123';// Arrange
-        const obj = new Intern(id);// Act
-        expect(getID()).toEqual(id);// Assert
+        const obj = new Intern('', id);// Act
+        expect(obj.getID()).toEqual(id);// Assert
     });
 
     // * `getEmail()`
     it("getEmail", () => {
         const email = 'some@thing.com';// Arrange
-        const obj = new Intern(email);// Act
-        expect(getEmail()).toEqual(email);// Assert
+        const obj = new Intern('', '', email);// Act
+        expect(obj.getEmail()).toEqual(email);// Assert
     });
 
     // * `getSchool()`
     it("getSchool", () => {
         const school = 'Bootcamp University';// Arrange
-        const obj = new Intern(school);// Act
-        expect(getSchool()).toEqual(school);// Assert
+        const obj = new Intern('', '', '', school);// Act
+        expect(obj.getSchool()).toEqual(school);// Assert
     });
 
     // * `getRole()` returns `'Intern'`
     it("getRole", () => {
         const role = 'Intern';// Arrange
-        const obj = new Intern(role);// Act
-        expect(getRole()).toEqual(role);// Assert
+        const obj = new Intern();// Act
+        expect(obj.getRole()).toEqual(role);// Assert
     });
 
 
