@@ -1,8 +1,7 @@
 
-// The first class is an `Employee` parent class with the following properties and methods:
-
 const Employee = require("../lib/Employee");
 
+// The first class is an `Employee` parent class with the following properties and methods:
 describe("Employee class", () => {
 // * `name`
     it("name", () => {

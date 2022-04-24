@@ -1,7 +1,7 @@
 
 const inquirer = require('inquirer');
 const fs = require("fs");
-const genMD = require("./generateMarkdown.js");
+// const genMD = require("./generateMarkdown.js");
 const Choices = require('inquirer/lib/objects/choices');
 const { Console } = require('console');
 
