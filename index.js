@@ -1,21 +1,18 @@
 
 const inquirer = require('inquirer');
 const fs = require("fs");
-// const genMD = require("./generateMarkdown.js");
+const genHTML = require("./lib/generate-html");
 const Choices = require('inquirer/lib/objects/choices');
 const { Console } = require('console');
 
 
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, `${data}\n`, (err) =>
-    err ? console.error(err) : console.log('Success!')
-    );
-}
+var answers = [];
 
 
 // WHEN I start the application
 // THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
 function askMgrQuestions() {
+    genHTML.writeHTMLTop();
     const questions = [
         inquirer
             .prompt([
@@ -49,7 +46,7 @@ function askMgrQuestions() {
                 }
             ])
             .then((response) => {
-
+                genHTML.appendHTMLCard(response.name, "Manager", response.id, response.email, response.info);
                 if (response.nextAction === 'Add an engineer') {
                     askEngQuestions();
                 } else if (response.nextAction === 'Add an intern') {
@@ -57,8 +54,8 @@ function askMgrQuestions() {
                 } else {
                     // WHEN I decide to finish building my team
                     // THEN I exit the application, and the HTML is generated
-                    generateHTML();
-                    Console.log('Team is complete please view your team site.')
+                    genHTML.appendHTMLBot()
+                    console.log('Team is complete please view your team site.')
                 }
 
             }
@@ -100,7 +97,7 @@ function askEngQuestions() {
                 }
             ])
             .then((response) => {
-
+                genHTML.appendHTMLEngineerCard(response.name, "Engineer", response.id, response.email, response.info);
                 if (response.nextAction === 'Add an engineer') {
                     askEngQuestions();
                 } else if (response.nextAction === 'Add an intern') {
@@ -108,8 +105,8 @@ function askEngQuestions() {
                 } else {
                     // WHEN I decide to finish building my team
                     // THEN I exit the application, and the HTML is generated
-                    generateHTML();
-                    Console.log('Team is complete please view your team site.')
+                    genHTML.appendHTMLBot()
+                    console.log('Team is complete please view your team site.')
                 }
             }
             )
@@ -150,7 +147,7 @@ function askInternQuestions() {
                 }
             ])
             .then((response) => {
-
+                genHTML.appendHTMLCard(response.name, "Intern", response.id, response.email, response.info);
                 if (response.nextAction === 'Add an engineer') {
                     askEngQuestions();
                 } else if (response.nextAction === 'Add an intern') {
@@ -158,8 +155,8 @@ function askInternQuestions() {
                 } else {
                     // WHEN I decide to finish building my team
                     // THEN I exit the application, and the HTML is generated
-                    generateHTML();
-                    Console.log('Team is complete please view your team site.')
+                    genHTML.appendHTMLBot()
+                    console.log('Team is complete please view your team site.')
                 }
             }
             )
@@ -174,5 +171,5 @@ function askInternQuestions() {
     }
     
     // Function call to initialize app
-    // init();
+    init();
     
