@@ -1,10 +1,10 @@
-# Common text title
+# Object Oriented Programming - Profile Generator
 
-Repository Name: project
+Repository Name: oop-profile-generator
 
 ## Description 
 
-This project is / does...
+This application recieves user input via terminal prompts to create a site which displays a manager's team information.
 
 
 ## Technologies
@@ -12,49 +12,42 @@ This project is / does...
 Technologies used on this project include:
 * HTML
 * CSS
-* 3rd Part API
-* DayJS
-* 
-*
-*
-*
+* Tailwind
+* Javascript
+* Node.js
+* Jest
 
 
 ## Table of Contents (Optional)
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Final Product](#finalproduct)
+* [Final Product](#Final_Product)
 
 ## Installation
 
-No installation is required; simply visit: https://blec333.github.io/project/ to review my deployed site.
-
+This application runs from a terminal using npm packages and node.js
 
 ## Usage 
 
-To begin using this site after loading:
-
-Simply type in...
-
-Click the buttons to...
-
-Your information will be saved...
+To begin using this application 
 
 ## Final Product
 
-<img title="image" alt="Style Showcase Page Screenshot" src="./assets/images/image1.jpg">
-<img title="image" alt="Style Showcase Page Screenshot" src="./assets/images/image2.jpg">
-<img title="image" alt="Style Showcase Page Screenshot" src="./assets/images/image3.gif">
+<img title="image" alt="Style Showcase Page Screenshot" src="./assets/images/video-gif.gif">
 
-
-
-Deployed Application
-https://blec333.github.io/project/
 
 Github Repository
-https://github.com/Blec333/project
+https://github.com/Blec333/oop-profile-generator
 
+
+## Tests
+
+NPM install and run using - Jest
+
+## Video
+
+[![Video](./assets/images/performance.gif)](https://drive.google.com/open?id=1RnYptbggHiLa4ad4gx0Ljy6pauSCucVo&authuser=bleclair3%40gmail.com&usp=drive_fs "Video")
 
 ### License
 
